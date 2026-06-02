@@ -1,7 +1,7 @@
 ---
 site_name: Red Hat Partner Collection Certification
-site_url: https://docs.ansible.com/projects/partner-certification/
-repo_url: https://github.com/ansible/partner-certification
+site_url: https://docs.ansible.com/projects/partner-certification-requirements/
+repo_url: https://github.com/ansible-collections/partner-certification-requirements
 edit_uri: blob/main/docs/
 docs_dir: docs
 strict: true
