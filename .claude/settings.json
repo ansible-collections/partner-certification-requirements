@@ -7,7 +7,7 @@
       "Bash(cat:*)",
       "Bash(head:*)",
       "Bash(python3:*)",
-      "WebFetch(domain:partner-certification-requirements.readthedocs.io)"
+      "WebFetch(domain:docs.ansible.com)"
     ]
   }
 }
