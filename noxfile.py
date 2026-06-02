@@ -38,7 +38,9 @@ def commitlint(session: nox.Session):
     session.install(
         "-r", "requirements/commitlint.in", "-c", "requirements/commitlint.txt"
     )
-    session.run("cz", "check", "--rev-range", "origin/main..HEAD", *session.posargs)
+    if not session.posargs:
+        session.error("Pass a rev-range, e.g.: nox -e commitlint -- origin/main..HEAD")
+    session.run("cz", "check", "--rev-range", *session.posargs)
 
 
 @nox.session
