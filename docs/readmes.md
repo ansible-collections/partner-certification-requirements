@@ -1,6 +1,6 @@
 # README requirements
 
-Collection READMEs should follow the [certified collection README template](https://github.com/oraNod/partner-certification-requirements/blob/main/docs/readme-template.md?plain=1) to provide a consistent experience.
+Collection READMEs should follow the [certified collection README template](https://github.com/ansible-collections/partner-certification-requirements/blob/main/docs/readme-template.md?plain=1) to provide a consistent experience.
 
 ## Required content
 
