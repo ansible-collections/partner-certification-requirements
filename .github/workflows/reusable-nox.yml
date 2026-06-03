@@ -15,11 +15,6 @@ jobs:
             python-versions: "3.12"
           - session: formatters_check
             python-versions: "3.12"
-          - session: commitlint
-            python-versions: "3.12"
-            fetch-depth: 0
-            ref: ${{ github.event.pull_request.head.sha || github.sha }}
-            extra-args: origin/main..HEAD
           - session: build
             python-versions: "3.12"
     name: "Run nox ${{ matrix.session }} session"
@@ -27,16 +22,31 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v6
         with:
-          fetch-depth: ${{ matrix.fetch-depth || 1 }}
-          ref: ${{ matrix.ref || github.ref }}
           persist-credentials: false
-      - name: Fetch main branch
-        if: ${{ matrix.fetch-depth == 0 }}
-        run: git fetch origin main
       - name: Setup nox
         uses: wntrblm/nox@2026.04.10
         with:
           python-versions: "${{ matrix.python-versions }}"
-      - name: "Run nox -e ${{ matrix.session }}"
+      - name: "Run nox -s ${{ matrix.session }}"
         run: |
-          nox -e "${{ matrix.session }}" -- ${{ matrix.extra-args }}
+          nox -s "${{ matrix.session }}"
+
+  commitlint:
+    runs-on: ubuntu-latest
+    name: "Run nox commitlint session"
+    steps:
+      - name: Check out PR head
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Fetch main branch
+        run: git fetch origin main
+      - name: Setup nox
+        uses: wntrblm/nox@2026.04.10
+        with:
+          python-versions: "3.12"
+      - name: Run nox commitlint session
+        run: |
+          nox -s commitlint -- origin/main..HEAD
