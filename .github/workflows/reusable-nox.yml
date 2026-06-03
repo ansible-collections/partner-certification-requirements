@@ -18,6 +18,7 @@ jobs:
           - session: commitlint
             python-versions: "3.12"
             fetch-depth: 0
+            ref: ${{ github.event.pull_request.head.sha || github.sha }}
             extra-args: origin/main..HEAD
           - session: build
             python-versions: "3.12"
@@ -27,6 +28,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: ${{ matrix.fetch-depth || 1 }}
+          ref: ${{ matrix.ref || github.ref }}
           persist-credentials: false
       - name: Fetch main branch
         if: ${{ matrix.fetch-depth == 0 }}
