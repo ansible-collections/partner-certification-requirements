@@ -97,6 +97,7 @@ help available on the Ansible Forum (https://forum.ansible.com/).
 ### Third-party vendor collections
 
 - Third-party vendor collections should include a support statement.
+- Support statements should be clear that Red Hat customers are entitled to open support cases via the **Create issue** button on Automation Hub.
 
 ## Release notes and roadmap
 

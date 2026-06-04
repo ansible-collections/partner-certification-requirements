@@ -31,7 +31,7 @@ If a collection contains validated content and it requires community packages, s
 Collections in the `ansible` or `redhat` namespaces, or collections managed by Red Hat teams, must include a **Support** section that identifies:
 
 - Which Red Hat group maintains the collection (for example, Ansible, OpenShift, RHEL).
-- How customers can open support issues using the **Create issue** link on Automation Hub
+- How customers can open support issues using the **Create issue** button on Automation Hub.
 
 The following is an example support statement:
 
@@ -46,5 +46,6 @@ has been obtained either from Galaxy or GitHub, there may be community
 help available on the Ansible Forum (https://forum.ansible.com/).
 ```
 
-Third-party vendor collections should also include a support statement.
-The [certified collection README template](https://access.redhat.com/articles/7068606) provides guidance on structure and content.
+Third-party vendor collections should also include a support statement and direct Red Hat customers to open support cases via the **Create issue** button on Automation Hub.
+
+The [certified collection README template](https://github.com/ansible-collections/partner-certification-requirements/blob/main/docs/readme-template.md?plain=1) provides guidance on structure and content.

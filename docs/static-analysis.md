@@ -86,3 +86,7 @@ You can use the `build_ignore` section in `galaxy.yml` to exclude directories th
 - `changelogs/`
 - `.github/`
 - `docs/`
+
+## Additional reference
+
+- The [partner-certification-checker](tooling.md#certification-checker) provides a GitHub workflow that runs sanity and static analysis checks in CI/CD pipelines.

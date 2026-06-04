@@ -27,4 +27,8 @@ For example, if supported versions start at `2.16.0`, a collection can declare `
 ## Technology preview versions
 
 Versions of `ansible-core` released as a [Technology Preview](https://access.redhat.com/support/offerings/techpreview) are not supported for certification.
-Collections must not declare a technology preview version as their minimum `requires_ansible` value.
+
+Collections must not declare a Technology Preview version of `ansible-core` as the minimum value of the `requires_ansible` key.
+For example, `ansible-core` version 2.19 is a Technology Preview release only and collections cannot be certified with `requires_ansible >= 2.19.0`.
+
+For more information about Technology Preview versions, refer to [Current AAP and Ansible Core lifecycles](https://access.redhat.com/support/policy/updates/ansible-automation-platform#coreversion).

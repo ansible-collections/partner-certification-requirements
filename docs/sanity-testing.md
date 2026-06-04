@@ -35,3 +35,7 @@ See the [ansible.utils example](https://github.com/ansible-collections/ansible.u
 
 The `shellcheck` sanity test flags issues in shell scripts.
 Address these issues where possible, or add them to your sanity ignore files if they cannot be resolved.
+
+## Additional reference
+
+- The [partner-certification-checker](tooling.md#certification-checker) provides a GitHub workflow that runs sanity and static analysis checks in CI/CD pipelines.
