@@ -2,7 +2,8 @@
 
 The collection title should indicate, at a high level, the purpose of the collection.
 
-> All links in the README must be full URLs.
+> All links in the README must be full URLs. 
+> Links should use markdown format: [title](full URL).
 > Do not use relative links, as READMEs are rendered outside the repository on Red Hat Ansible Automation Hub.
 
 ## Description
