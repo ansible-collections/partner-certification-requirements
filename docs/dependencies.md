@@ -9,7 +9,7 @@ Collections with external Python dependencies must include them in either:
 
 See [Collection Metadata - Collection-level dependencies](https://docs.ansible.com/projects/builder/en/latest/collection_metadata) for further details.
 
-Python dependencies used for collection development should **not** be included in the files above. Collection development dependencies can be defined in a `test-requirements.txt` file.
+Python dependencies used for collection development should not be included in the files above. Collection development dependencies can be defined in a `test-requirements.txt` file.
 
 ### No `ansible` or `ansible-core` packages
 
