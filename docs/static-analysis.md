@@ -58,6 +58,7 @@ Some rule violations are particularly significant:
 
 - [ignore-errors](https://docs.ansible.com/projects/lint/rules/ignore-errors/): Can hide failures and cause unpredictable behavior. Replace `ignore_errors` directives with `failed_when` or `changed_when` error handling.
 - [schema](https://docs.ansible.com/projects/lint/rules/schema/): Can cause runtime failures. The `schema[meta]` violation in particular affects the integrity of collection metadata.
+- Missing `meta/main.yml` in roles: Every role directory must include a `meta/main.yml` file with role metadata. Missing metadata can trigger lint warnings and affects how Automation Hub displays role information.
 
 ## Ansible Lint configuration
 
