@@ -83,6 +83,7 @@ You can use the `build_ignore` section in `galaxy.yml` to exclude directories th
 
 - `tests/integration/`
 - `tests/unit/`
+- `extensions/molecule/`
 - `changelogs/`
 - `.github/`
 - `docs/`
