@@ -14,7 +14,7 @@ At minimum, the README must include:
 
 ## Links
 
-All links in the README must be valid and use full URLs.
+All links in the README must be valid, using full URLs and markdown syntax.
 Do not use relative links, as READMEs are rendered outside the repository on Automation Hub.
 
 ## Installation section
