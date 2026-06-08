@@ -7,7 +7,7 @@ Collections with external Python dependencies must include them in either:
 - A `requirements.txt` file.
 - A `meta/ee-requirements.txt` file.
 
-These files are used by `ansible-builder` when creating execution environments. See [Collection Metadata - Collection-level dependencies](https://docs.ansible.com/projects/builder/en/latest/collection_metadata) for further details.
+These files are used by `ansible-builder` when creating execution environments. See [Ansible Builder - Collection-level dependencies](https://docs.ansible.com/projects/builder/en/latest/collection_metadata) for further details.
 
 Python dependencies used for collection development should not be included in the files above. Collection development dependencies should be defined in a `test-requirements.txt` file.
 
@@ -41,7 +41,7 @@ An exception applies when both the collection and its dependency are provided by
 ## Binary dependencies
 
 Collections with binary dependencies must include a `bindep.txt` file.
-This file is used by `ansible-builder` when creating execution environments.
+This file is used by `ansible-builder` when creating execution environments. See [Ansible Builder - System-level Dependencies](https://docs.ansible.com/projects/builder/en/latest/collection_metadata/#system-level-dependencies) for further details.
 
 ## Collection dependencies
 
