@@ -21,7 +21,8 @@ Modules and plugins have access to the `ansible` Python namespace at runtime, in
 The `ansible` package is a community distribution that bundles 80+ community collections and is not supported in certified collections.
 
 !!! note
-    References to `ansible-core` in `pyproject.toml` for development tooling, such as [this example](https://github.com/ansible-collections/amazon.aws/blob/main/pyproject.toml#L33), are acceptable because they do not affect package installation.
+
+    References to `ansible-core` in `pyproject.toml` for collection development, such as [this example](https://github.com/ansible-collections/amazon.aws/blob/main/pyproject.toml#L33), are acceptable because they do not affect package installation.
 
 ### Version specifiers
 
