@@ -2,7 +2,14 @@
 
 ## Python dependencies
 
-Collections with external Python dependencies must include a `requirements.txt` file.
+Collections with external Python dependencies must include them in either:
+
+- A `requirements.txt` file.
+- A `meta/ee-requirements.txt` file.
+
+See [Collection Metadata - Collection-level dependencies](https://docs.ansible.com/projects/builder/en/latest/collection_metadata) for further details.
+
+Python dependencies used for collection development should **not** be included in the files above. Collection development dependencies can be defined in a `test-requirements.txt` file.
 
 ### No `ansible` or `ansible-core` packages
 
@@ -21,9 +28,9 @@ The `ansible` package is a community distribution that bundles 80+ community col
 Dependency versions in `requirements.txt` must not use upper bounds or pinned versions.
 Use `>=` or leave the version unspecified:
 
-| Allowed | Not allowed |
-| --- | --- |
-| `requests` | `requests==2.31.0` |
+| Allowed            | Not allowed        |
+| ------------------ | ------------------ |
+| `requests`         | `requests==2.31.0` |
 | `requests>=2.28.0` | `requests<=2.31.0` |
 
 Pinned or capped versions can cause conflicts when multiple collections in an execution environment depend on different versions of the same package.
