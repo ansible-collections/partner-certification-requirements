@@ -7,7 +7,7 @@ Collections with external Python dependencies must include them in either:
 - A `requirements.txt` file.
 - A `meta/ee-requirements.txt` file.
 
-See [Collection Metadata - Collection-level dependencies](https://docs.ansible.com/projects/builder/en/latest/collection_metadata) for further details.
+These files are used by `ansible-builder` when creating execution environments. See [Collection Metadata - Collection-level dependencies](https://docs.ansible.com/projects/builder/en/latest/collection_metadata) for further details.
 
 Python dependencies used for collection development should not be included in the files above. Collection development dependencies should be defined in a `test-requirements.txt` file.
 
