@@ -1,4 +1,4 @@
-# Red Hat Partner Collection Certification Requirements
+# Red Hat partner collection certification requirements
 
 [![Discuss on the Ansible Forum](https://img.shields.io/badge/Ansible%20Forum-Partner%20Certification-%235cbec1?logo=discourse)](https://forum.ansible.com/tag/red-hat-partner)
 
