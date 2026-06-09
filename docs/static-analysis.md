@@ -20,6 +20,15 @@ The following rules are enforced during certification and must not appear in `sk
 
 Skipping these rules can mask issues that affect reliability or security in production environments.
 
+### `meta-runtime[unsupported-version]`
+
+This rule flags collections where `requires_ansible` in `meta/runtime.yml` includes unsupported versions of `ansible-core`, even as a lower bound.
+Keeping `requires_ansible` current ensures that collections are validated against supported `ansible-core` versions.
+
+Enforcement may vary depending on context.
+Collections tightly coupled to `ansible-core` release cycles, such as those in the `ansible` and `redhat` namespaces, may have more flexibility.
+For partner collections, updating the `requires_ansible` to reflect currently supported `ansible-core` versions is expected as part of certification.
+
 ## Rules that should be addressed
 
 The following rules do not block certification but should be resolved in subsequent releases:
@@ -49,6 +58,7 @@ Some rule violations are particularly significant:
 
 - [ignore-errors](https://docs.ansible.com/projects/lint/rules/ignore-errors/): Can hide failures and cause unpredictable behavior. Replace `ignore_errors` directives with `failed_when` or `changed_when` error handling.
 - [schema](https://docs.ansible.com/projects/lint/rules/schema/): Can cause runtime failures. The `schema[meta]` violation in particular affects the integrity of collection metadata.
+- Missing `meta/main.yml` in roles: Every role directory must include a `meta/main.yml` file with role metadata. Missing metadata can trigger lint warnings and affects how Automation Hub displays role information.
 
 ## Ansible Lint configuration
 
