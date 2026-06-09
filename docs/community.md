@@ -67,7 +67,7 @@ If your collection is in both ecosystems, monitor both schedules so that compati
 
 ### Stay responsive to community requests
 
-The Ansible Community Steering Committee actively monitors collections in the package for maintenance signals such as recent releases, working CI, and responsiveness to issues.
+The [Ansible Community Steering Committee](https://docs.ansible.com/projects/ansible/latest/community/steering/community_steering_committee.html) actively monitors collections in the package for maintenance signals such as recent releases, working CI, and responsiveness to issues.
 Collections that appear unmaintained or that do not respond to community pings may be removed from the package.
 
 If your collection is in both ecosystems, make sure someone on your team is watching for issues and pull requests from community members, not just from Red Hat.
