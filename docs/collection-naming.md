@@ -1,4 +1,4 @@
-# Naming conventions
+# Naming convention requirements
 
 Collection names must align with the product they support.
 If you are submitting a collection for the first time, verify that the collection name clearly reflects the product or technology it automates.
