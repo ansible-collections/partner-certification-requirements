@@ -2,9 +2,7 @@
 
 Red Hat certification and the Ansible community package are related but separate.
 Certifying a collection with Red Hat makes it available on Ansible Automation Hub for Red Hat customers.
-Including a collection in the Ansible community package makes it available via `pip install ansible` and listed on [docs.ansible.com](https://docs.ansible.com/).
-
-Partners are encouraged to participate in both.
+Including a collection in the Ansible community package makes it installable via `pip install ansible` and visible on [docs.ansible.com](https://docs.ansible.com/).
 
 ## Where certified collection documentation is published
 
@@ -14,43 +12,13 @@ Each certified collection has a public documentation page on this catalog.
 The collection index on [docs.ansible.com](https://docs.ansible.com/projects/ansible/latest/collections/index.html) documents collections that are part of the Ansible community package, which is maintained by members of the Ansible community.
 Red Hat certification does not automatically include a collection on `docs.ansible.com`.
 
-## Inclusion in the Ansible community package
+## Ansible community package requirements
 
-If you want your collection included in the Ansible community package, that process is handled by the Ansible community independently from Red Hat certification.
+Inclusion in the community package is handled by the Ansible community independently from Red Hat certification.
+The community package includes collections that contain plugins or modules; role-only collections and validated content are outside its scope.
 
-To get started:
-
-1. Review the [community collection requirements](https://docs.ansible.com/projects/ansible/latest/community/collection_contributors/collection_requirements.html) to understand what the community expects.
-1. Submit your collection for inclusion by following the process described in that guide.
-1. Ask questions on the [Ansible Forum](https://forum.ansible.com) if you need help along the way.
-
-The community is welcoming and helpful.
-Many certified collections are also part of the Ansible community package, and partners benefit from the broader visibility and contribution that comes with inclusion.
-
-## How community inclusion benefits certified collections
-
-Including a certified collection in the Ansible community package creates a quality feedback loop that strengthens the collection for all users, including enterprise customers.
-
-### Broader usage finds more bugs
-
-A larger and more diverse user base exercises the collection in environments and configurations that internal testing alone cannot cover.
-More real-world usage means more bug reports, more edge cases discovered, and more opportunities to fix issues before they reach Red Hat customers.
-
-### Stronger CI and compatibility testing
-
-The community package requires collections to run sanity, integration, and unit tests against every supported ansible-core release.
-Collections must also test against the ansible-core `devel` or `milestone` branch on at least a weekly basis.
-This catches compatibility issues early, often before a new `ansible-core` version is even released.
-
-### Community contributions
-
-Public issue trackers, forum discussions, and contributor guidelines open the door for community members to contribute bug fixes, feature requests, and documentation improvements.
-These contributions directly improve the quality of the collection.
-
-### Overlapping quality standards
-
-Many community requirements align with Red Hat certification requirements, including sanity testing, semantic versioning, changelog formatting, and documentation standards.
-Meeting both sets of requirements raises the overall quality bar and reduces the effort needed to maintain certification over time.
+Partners are encouraged to review and adopt [community collection requirements](https://docs.ansible.com/projects/ansible/latest/community/collection_contributors/collection_requirements.html) as good practices, even if there are no plans to request inclusion in the Ansible community package.
+Many community requirements overlap with Red Hat certification requirements, including sanity testing, semantic versioning, changelog formatting, and documentation standards.
 
 ## Coordinating across both ecosystems
 
