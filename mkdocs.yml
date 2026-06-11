@@ -25,6 +25,7 @@ plugins:
         Certification requirements:
           - index.md
           - collection-naming.md
+          - collection-visibility.md
           - versioning.md
           - ansible-core-compatibility.md
           - licensing.md
@@ -43,6 +44,7 @@ nav:
   - Certification requirements:
       - index.md
       - Naming conventions: collection-naming.md
+      - Visibility: collection-visibility.md
       - Versioning: versioning.md
       - Ansible core compatibility: ansible-core-compatibility.md
       - Licensing: licensing.md
