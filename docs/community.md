@@ -25,14 +25,6 @@ Many community requirements overlap with Red Hat certification requirements, inc
 Collections that are both certified and included in the Ansible community package must meet two sets of requirements on two different schedules.
 Understanding where these overlap and where they diverge helps avoid common friction points.
 
-### Track both timelines
-
-The Ansible community package follows its own release cadence with strict feature freeze dates.
-These do not always align with Red Hat certification timelines.
-
-For example, a new `ansible-core` version may be required by the community package weeks before certification communications address it.
-If your collection is in both ecosystems, monitor both schedules so that compatibility work is not delayed.
-
 ### Stay responsive to community requests
 
 The [Ansible Community Steering Committee](https://docs.ansible.com/projects/ansible/latest/community/steering/community_steering_committee.html) actively monitors collections in the package for maintenance signals such as recent releases, working CI, and responsiveness to issues.
