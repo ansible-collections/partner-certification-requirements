@@ -54,3 +54,4 @@ nav:
       - Sanity testing: sanity-testing.md
       - Static analysis: static-analysis.md
   - Certification tooling: tooling.md
+  - Ansible community: community.md
