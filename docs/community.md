@@ -25,37 +25,10 @@ Many community requirements overlap with Red Hat certification requirements, inc
 Collections that are both certified and included in the Ansible community package must meet two sets of requirements on two different schedules.
 Understanding where these overlap and where they diverge helps avoid common friction points.
 
-### Stay responsive to community requests
+If your collection is included in the Ansible community package, please:
 
-The [Ansible Community Steering Committee](https://docs.ansible.com/projects/ansible/latest/community/steering/community_steering_committee.html) actively monitors collections in the package for maintenance signals such as recent releases, working CI, and responsiveness to issues.
-Collections that appear unmaintained or that do not respond to community pings may be removed from the package.
+- Be responsive to requests from the [Ansible Community Steering Committee](https://docs.ansible.com/projects/ansible/latest/community/steering/community_steering_committee.html).
+- Plan collection release schedules to accommodate the community package lifecycle.
+- Participate in the Ansible community by joining the [Ansible Forum](https://forum.ansible.com).
 
-If your collection is in both ecosystems, make sure someone on your team is watching for issues and pull requests from community members, not just from Red Hat.
-
-### Release on time for feature freezes
-
-The community package has a feature freeze before each major release.
-Collections that miss the freeze may have their version pinned or their latest release excluded.
-
-Plan your release schedule so that stable versions are available before the community package freeze, not just before the certification deadline.
-
-### Subscribe to community communications
-
-Certification communications from Red Hat and community announcements come through different channels.
-To stay informed about the community package:
-
-- Subscribe to the [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn) for release announcements and important changes.
-- Watch the [Ansible Forum](https://forum.ansible.com) for feature freeze dates, maintenance requests, and discussions about your collection.
-- Follow the [ansible-community/ansible-build-data](https://github.com/ansible-community/ansible-build-data) repository for package build status and version constraints.
-
-Missing a community announcement can lead to last-minute scrambles or broken package builds that affect all Ansible users.
-
-## Getting involved in the Ansible community
-
-Whether or not you pursue inclusion in the Ansible community package, there are many ways to participate in the Ansible community:
-
-- Join the [Ansible Forum](https://forum.ansible.com) and use the [`red-hat-partner`](https://forum.ansible.com/tag/red-hat-partner) tag for certification discussions.
-- Attend community events and working group meetings listed on the forum.
-- Contribute to other projects in the [Ansible ecosystem](https://docs.ansible.com/ecosystem.html) as well as other collections.
-
-For more information, see the [Ansible communication guide](https://docs.ansible.com/ansible/devel/community/communication.html).
+> Feel free to use the [`red-hat-partner`](https://forum.ansible.com/tag/red-hat-partner) tag for discussions related to certified collections.
