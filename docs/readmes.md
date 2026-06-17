@@ -48,4 +48,6 @@ help available on the Ansible Forum (https://forum.ansible.com/).
 
 Third-party vendor collections should also include a support statement and direct Red Hat customers to open support cases via the **Create issue** button on Automation Hub.
 
+Collections published as validated content that serve both upstream (Galaxy/GitHub) and downstream (Automation Hub) distributions may direct users to the project's issue tracker or the [Ansible Forum](https://forum.ansible.com/) as the primary support channel.
+
 The [certified collection README template](https://github.com/ansible-collections/partner-certification-requirements/blob/main/docs/readme-template.md?plain=1) provides guidance on structure and content.
