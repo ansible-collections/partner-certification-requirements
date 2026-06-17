@@ -11,7 +11,6 @@ The following rules are enforced during certification and must not appear in `sk
 - `meta-no-info`
 - `package-latest`
 - `no-handler`
-- `no-log-password`
 - `meta-runtime[unsupported-version]`
 - `no-changed-when`
 - `risky-file-permissions`
@@ -71,6 +70,11 @@ When configuring `.ansible-lint`, keep the following in mind:
 - **`exclude_paths`**: Must not exclude content directories such as `plugins/`, `roles/`, or `extensions/`. Excluding non-content directories such as `changelogs/`, `extensions/molecule/`, `.github/`, and `docs/` is acceptable.
 - **`profile`**: Must be set to `production` or omitted.
 
+### `no-log-password`
+
+This rule is not included in any Ansible Lint profile and runs only if explicitly enabled in the `.ansible-lint` configuration.
+Partner teams should include `no-log-password` in `warn_list` as a security practice.
+
 ### Example `.ansible-lint` configuration
 
 ```yaml
@@ -82,6 +86,9 @@ exclude_paths:
 skip_list:
   - yaml[indentation]
   - yaml[empty-lines]
+
+warn_list:
+  - no-log-password
 ```
 
 Only skip cosmetic rules such as YAML formatting.
