@@ -61,8 +61,9 @@ Some rule violations are particularly significant:
 
 ## Ansible Lint configuration
 
-Including an `.ansible-lint` configuration file in a collection tarball is allowed but not recommended.
-Consider using `.ansible-lint` in development environments only and excluding it from tarballs via the `build_ignore` list in `galaxy.yml`.
+Including an `.ansible-lint` configuration file in a collection tarball is allowed.
+Collections that rely on their `.ansible-lint` configuration for downstream tooling or CI pipelines should keep the file in the tarball.
+If the configuration is only used during development, consider excluding it from tarballs via the `build_ignore` list in `galaxy.yml`.
 
 When configuring `.ansible-lint`, keep the following in mind:
 
