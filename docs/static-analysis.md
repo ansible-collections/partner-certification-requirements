@@ -79,18 +79,8 @@ Partner teams should include `no-log-password` in `warn_list` as a security prac
 
 ### Example `.ansible-lint` configuration
 
-```yaml
----
-exclude_paths:
-  - changelogs
-  - .github
-
-skip_list:
-  - yaml[indentation]
-  - yaml[empty-lines]
-
-warn_list:
-  - no-log-password
+```yaml title=".ansible-lint"
+--8<-- "docs/.ansible-lint"
 ```
 
 Only skip cosmetic rules such as YAML formatting.

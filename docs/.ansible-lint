@@ -1,0 +1,16 @@
+---
+# Red Hat Ansible Collection Certification .ansible-lint file
+# Taken from: https://github.com/ansible-collections/partner-certification-requirements
+profile: production
+
+exclude_paths:
+  - .ansible/
+  - .github/
+  - changelogs/
+  - docs/
+  - tests/integration/
+  - tests/unit/
+  - extensions/molecule/
+
+warn_list:
+  - no-log-password
