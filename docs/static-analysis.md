@@ -62,7 +62,12 @@ Some rule violations are particularly significant:
 ## Ansible Lint configuration
 
 Including an `.ansible-lint` configuration file in a collection tarball is allowed but not recommended for certified collections.
-If the configuration is only used during development, consider excluding it from tarballs via the `build_ignore` list in `galaxy.yml`.
+If the configuration is only used during development, consider excluding it from tarballs via the `build_ignore` list in `galaxy.yml`:
+
+```yaml title="galaxy.yml"
+build_ignore:
+  - .ansible-lint
+```
 
 Validated collections that rely on an `.ansible-lint` configuration for downstream tooling or CI pipelines should keep the file in the tarball.
 
@@ -86,16 +91,29 @@ Partner teams should include `no-log-password` in `warn_list` as a security prac
 Only skip cosmetic rules such as YAML formatting.
 If your collection has a large number of cosmetic failures, this approach is preferable to leaving them unaddressed.
 
-## Excluding directories from collection builds
+## Excluding directories and files from collection builds
 
-You can use the `build_ignore` section in `galaxy.yml` to exclude directories that do not contain user-facing content from collection tarballs:
+You can use the `build_ignore` section in `galaxy.yml` to exclude certain directories and files that do not contain user-facing content from collection tarballs:
 
-- `tests/integration/`
-- `tests/unit/`
-- `extensions/molecule/`
-- `changelogs/`
-- `.github/`
-- `docs/`
+```yaml title="galaxy.yml"
+build_ignore:
+  - tests/integration
+  - tests/unit
+  - extensions/molecule
+  - changelogs
+  - docs
+  - collections
+  - .github
+  - .ansible
+  - .tox
+  - .venv
+  - .agents
+  - .claude
+  - .vscode
+  - .pytest_cache
+  - .pre-commit-config.yaml
+  - .ansible-lint
+```
 
 ## Additional reference
 
