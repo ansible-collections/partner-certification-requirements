@@ -1,6 +1,7 @@
 ---
 # Red Hat Ansible Collection Certification .ansible-lint file
-# Taken from: https://github.com/ansible-collections/partner-certification-requirements
+# Taken from:
+# https://github.com/ansible-collections/partner-certification-requirements
 profile: production
 
 exclude_paths:
