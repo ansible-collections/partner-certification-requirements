@@ -81,9 +81,6 @@ Partner teams should include `no-log-password` in `warn_list` as a security prac
 --8<-- "docs/.ansible-lint"
 ```
 
-Only skip cosmetic rules such as YAML formatting.
-If your collection has a large number of cosmetic failures, this approach is preferable to leaving them unaddressed.
-
 ## Excluding directories and files from collection builds
 
 You can use the `build_ignore` section in `galaxy.yml` to exclude certain directories and files that do not contain user-facing content from collection tarballs:
