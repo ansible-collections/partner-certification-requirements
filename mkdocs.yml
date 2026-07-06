@@ -10,9 +10,16 @@ validation:
     omitted_files: info
 not_in_nav: |
   readme-template.md
+  .ansible-lint
 
 theme:
-  name: 'ansible'
+  name: "ansible"
+  features:
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.snippets
 
 plugins:
   - llmstxt:

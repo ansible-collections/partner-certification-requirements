@@ -61,10 +61,8 @@ Some rule violations are particularly significant:
 
 ## Ansible Lint configuration
 
-Including an `.ansible-lint` configuration file in a collection tarball is allowed but not recommended for certified collections.
-If the configuration is only used during development, consider excluding it from tarballs via the `build_ignore` list in `galaxy.yml`.
-
-Validated collections that rely on an `.ansible-lint` configuration for downstream tooling or CI pipelines should keep the file in the tarball.
+Including an `.ansible-lint` configuration file in a collection tarball is allowed for certified collections.
+The file can be used for downstream tooling or CI pipelines, provided it does not skip or exclude required certification checks.
 
 When configuring `.ansible-lint`, keep the following in mind:
 
@@ -79,33 +77,32 @@ Partner teams should include `no-log-password` in `warn_list` as a security prac
 
 ### Example `.ansible-lint` configuration
 
-```yaml
----
-exclude_paths:
-  - changelogs
-  - .github
-
-skip_list:
-  - yaml[indentation]
-  - yaml[empty-lines]
-
-warn_list:
-  - no-log-password
+```yaml title=".ansible-lint"
+--8<-- "docs/.ansible-lint"
 ```
 
-Only skip cosmetic rules such as YAML formatting.
-If your collection has a large number of cosmetic failures, this approach is preferable to leaving them unaddressed.
+## Excluding directories and files from collection builds
 
-## Excluding directories from collection builds
+You can use the `build_ignore` section in `galaxy.yml` to exclude certain directories and files that do not contain user-facing content from collection tarballs:
 
-You can use the `build_ignore` section in `galaxy.yml` to exclude directories that do not contain user-facing content from collection tarballs:
-
-- `tests/integration/`
-- `tests/unit/`
-- `extensions/molecule/`
-- `changelogs/`
-- `.github/`
-- `docs/`
+```yaml title="galaxy.yml"
+build_ignore:
+  - tests/integration
+  - tests/unit
+  - extensions/molecule
+  - changelogs
+  - docs
+  - collections
+  - .github
+  - .ansible
+  - .tox
+  - .venv
+  - .agents
+  - .claude
+  - .vscode
+  - .pytest_cache
+  - .pre-commit-config.yaml
+```
 
 ## Additional reference
 
