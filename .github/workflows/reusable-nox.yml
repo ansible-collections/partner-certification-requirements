@@ -20,11 +20,11 @@ jobs:
     name: "Run nox ${{ matrix.session }} session"
     steps:
       - name: Check out repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           persist-credentials: false
       - name: Setup nox
-        uses: wntrblm/nox@2026.04.10
+        uses: wntrblm/nox@97e345e6a26bb2c5aacff9cc4327bd4ac1b00ce6 # 2026.04.10
         with:
           python-versions: "${{ matrix.python-versions }}"
       - name: "Run nox -s ${{ matrix.session }}"
@@ -36,7 +36,7 @@ jobs:
     name: "Run nox commitlint session"
     steps:
       - name: Check out PR head
-        uses: actions/checkout@v7
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 0
@@ -44,7 +44,7 @@ jobs:
       - name: Fetch main branch
         run: git fetch origin main
       - name: Setup nox
-        uses: wntrblm/nox@2026.04.10
+        uses: wntrblm/nox@97e345e6a26bb2c5aacff9cc4327bd4ac1b00ce6 # 2026.04.10
         with:
           python-versions: "3.12"
       - name: Run nox commitlint session
