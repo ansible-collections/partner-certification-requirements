@@ -8,3 +8,12 @@ The license must be visible to users through at least one of the following:
 - The `license` field in `galaxy.yml`, which makes the license type visible on [Red Hat Ansible Automation Hub](https://console.redhat.com/ansible/automation-hub).
 - The license type stated in the README, for example Apache-2.0.
 - A link to the license file in the README.
+
+## `license` and `license_file` in `galaxy.yml`
+
+The [`galaxy.yml`](https://docs.ansible.com/ansible/latest/dev_guide/collections_galaxy_meta.html) file supports two mutually exclusive fields for specifying the license:
+
+- **`license`** -- a list of [SPDX license identifiers](https://spdx.org/licenses/) (for example, `GPL-3.0-or-later`).
+- **`license_file`** -- a path to a license file included in the collection (for example, `LICENSE`).
+
+Either field satisfies the licensing requirement. Only one may be present in `galaxy.yml` at a time.
