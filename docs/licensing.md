@@ -16,4 +16,4 @@ The [`galaxy.yml`](https://docs.ansible.com/ansible/latest/dev_guide/collections
 - **`license`** -- a list of [SPDX license identifiers](https://spdx.org/licenses/) (for example, `GPL-3.0-or-later`).
 - **`license_file`** -- a path to a license file included in the collection (for example, `LICENSE`).
 
-Either field satisfies the licensing requirement. Only one may be present in `galaxy.yml` at a time.
+Either the `license` or `license_file` field must be populated in `galaxy.yml`.
