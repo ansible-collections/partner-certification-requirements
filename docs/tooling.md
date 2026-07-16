@@ -12,7 +12,7 @@ For complete instructions, see the [certification checker README](https://github
 
 ## Claude Code certification review
 
-The [certification-review](https://github.com/ansible-collections/partner-certification-requirements/tree/main/.claude/skills/certification-review.md) skill for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) reviews Ansible collections against certification requirements interactively.
+The [certification-review](https://github.com/ansible-collections/partner-certification-requirements/tree/main/.claude/skills/certification-review.md) skill for [Claude Code](https://code.claude.com/docs) reviews Ansible collections against certification requirements interactively.
 
 ### Install the skill
 
