@@ -5,7 +5,7 @@ When reviewing a collection, summarize findings in a table with one row per requ
 | Requirement                | Status              | Finding           |
 | -------------------------- | ------------------- | ----------------- |
 | Naming Conventions         | PASS / NEEDS ACTION | brief explanation |
-| Visibility                 | PASS / NEEDS ACTION | brief explanation |
+| Availability               | PASS / NEEDS ACTION | brief explanation |
 | Versioning                 | PASS / NEEDS ACTION | brief explanation |
 | Ansible Core Compatibility | PASS / NEEDS ACTION | brief explanation |
 | Licensing                  | PASS / NEEDS ACTION | brief explanation |
