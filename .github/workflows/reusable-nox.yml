@@ -24,7 +24,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Setup nox
-        uses: wntrblm/nox@3284968a16fa5bd7fc0cc64a69a531404ccb4756 # 2026.07.11
+        uses: wntrblm/nox@57f9e10c4eef84277dcd692d0056420c947674f9 # 2026.08.10
         with:
           python-versions: "${{ matrix.python-versions }}"
       - name: "Run nox -s ${{ matrix.session }}"
@@ -44,7 +44,7 @@ jobs:
       - name: Fetch main branch
         run: git fetch origin main
       - name: Setup nox
-        uses: wntrblm/nox@3284968a16fa5bd7fc0cc64a69a531404ccb4756 # 2026.07.11
+        uses: wntrblm/nox@57f9e10c4eef84277dcd692d0056420c947674f9 # 2026.08.10
         with:
           python-versions: "3.12"
       - name: Run nox commitlint session
