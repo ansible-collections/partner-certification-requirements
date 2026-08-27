@@ -38,9 +38,9 @@ Open your collection project directory in Claude Code and invoke the skill:
 Claude fetches the current certification requirements, explores your collection, and checks each requirement one at a time.
 At the end, it produces a summary table with a PASS or NEEDS ACTION status for each requirement area.
 
-## Using requirements with other AI agents
+## Ingesting the requirements for use with AI agents
 
 The certification requirements are published as a single text file at
 <https://docs.ansible.com/projects/partner-certification-requirements/llms-full.txt>.
-Any AI coding agent can fetch this file and use it as a checklist to review a collection against the requirements.
+Any AI agent can fetch this file and use it as a checklist to review a collection against the certification requirements.
 The Claude Code skill above automates this workflow, but the data itself is agent-agnostic.
