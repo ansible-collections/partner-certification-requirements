@@ -4,14 +4,20 @@ Collections must pass `ansible-test sanity` checks for certification.
 
 ## Python boilerplate
 
-All Python files in plugins and modules must include the standard boilerplate:
+The `future-import-boilerplate` and `metaclass-boilerplate` sanity tests require every non-empty `.py` file in the following directories to include the standard boilerplate:
+
+- `plugins/modules/`
+- `plugins/module_utils/`
+- `tests/unit/plugins/modules/`
+- `tests/unit/plugins/module_utils/`
+- `tests/integration/targets/*/library/`
 
 ```python
 from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 ```
 
-Missing boilerplate triggers `future-import-boilerplate` or `metaclass-boilerplate` errors.
+Files that are empty or consist entirely of variable assignments (documentation-only Python files) are also exempt.
 
 ## Sanity ignore files
 
