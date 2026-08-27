@@ -17,9 +17,6 @@ from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 ```
 
-These tests are gated on Python 2 support: they only apply when the collection declares support for Python 2.7 via `tests/config.yml`.
-If your collection does not support Python 2.7 (see [Python version support](#python-version-support) below), these tests do not run and no boilerplate is required.
-
 Files that are empty or consist entirely of variable assignments (documentation-only Python files) are also exempt.
 
 ## Sanity ignore files
