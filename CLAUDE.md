@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) or any AI agent or tool  when working with code in this repository.
 
 ## Project Overview
 
@@ -44,7 +44,7 @@ All four steps are required to keep the dual outputs in sync:
 
 ## Certification Review Skill
 
-`.claude/skills/certification-review.md` is a Claude Code skill that reviews Ansible collections against these requirements. It fetches `llms-full.txt` at runtime, so it never needs updating when requirements change -- all changes are contained in `docs/` and `mkdocs.yml`.
+`.claude/skills/certification-review.md` is an AI skill that reviews Ansible collections against these requirements. It fetches `llms-full.txt` at runtime, so it never needs updating when requirements change -- all changes are contained in `docs/` and `mkdocs.yml`.
 
 ## Dependencies
 
