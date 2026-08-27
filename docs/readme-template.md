@@ -81,7 +81,7 @@ ansible-galaxy collection install NAMESPACE.COLLECTION_NAME --upgrade
 ### Red Hat-managed collections
 
 - Collections in the `ansible` or `redhat` namespaces, or collections managed by Red Hat teams, must identify which Red Hat group maintains the collection and how customers can open support issues using the **Create issue** link on Automation Hub.
-- Use the following text, remove the backticks (`), and replace `<product team name>` with the appropriate team:
+- Use the following text, remove the backticks (`` ` ``), and replace `<product team name>` with the appropriate team:
 
 ```text
 This collection is maintained by Red Hat <product team name>.
