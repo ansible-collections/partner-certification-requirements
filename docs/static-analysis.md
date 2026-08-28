@@ -84,7 +84,7 @@ When configuring Ansible Lint, keep the following in mind:
 This rule is not included in any Ansible Lint profile and runs only if explicitly enabled in the `.ansible-lint` configuration.
 Partner teams should include `no-log-password` in `warn_list` as a security practice.
 
-### Example `.ansible-lint` configuration
+### Example Ansible Lint configuration
 
 ```yaml title=".ansible-lint"
 --8<-- "docs/.ansible-lint"
