@@ -61,10 +61,19 @@ Some rule violations are particularly significant:
 
 ## Ansible Lint configuration
 
-Including an `.ansible-lint` configuration file in a collection tarball is allowed for certified collections.
-The file can be used for downstream tooling or CI pipelines, provided it does not skip or exclude required certification checks.
+Ansible Lint searches for configuration in the following filenames, in the collection root:
 
-When configuring `.ansible-lint`, keep the following in mind:
+- `.ansible-lint`
+- `.ansible-lint.yml`
+- `.ansible-lint.yaml`
+- `.config/ansible-lint.yml`
+- `.config/ansible-lint.yaml`
+
+Including any of these configuration files in a collection tarball is allowed for certified collections.
+The file can be used for downstream tooling or CI pipelines, provided it does not skip or exclude required certification checks.
+The requirements below apply regardless of which filename is used.
+
+When configuring Ansible Lint, keep the following in mind:
 
 - **`skip_list`**: Must not include any of the enforced rules listed above.
 - **`exclude_paths`**: Must not exclude content directories such as `plugins/`, `roles/`, or `extensions/`. Excluding non-content directories such as `changelogs/`, `extensions/molecule/`, `.github/`, and `docs/` is acceptable.
