@@ -61,7 +61,7 @@ Some rule violations are particularly significant:
 
 ## Ansible Lint configuration
 
-Ansible Lint searches for configuration in the following filenames, in the collection root:
+Ansible Lint searches for configuration in the following filenames, in the collection root (see [Using local configuration files](https://docs.ansible.com/projects/lint/configuring/#using-local-configuration-files)):
 
 - `.ansible-lint`
 - `.ansible-lint.yml`
